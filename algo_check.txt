@@ -1,0 +1,28 @@
+  
+ALGORITHM  Length_of_sentence
+VAR
+    sentence[] : string;
+    length, vowels_number, words_number, i : integer :=0;
+
+  BEGIN
+
+    Write ('Enter a sentence');
+    Read(sentence[]);
+  WHILE (sentence[i] <> ".") DO
+	length := length +1; 
+  IF (sentence[i]= " " OR sentence[i]= ".") DO
+            words_number := words_number+1;
+ 
+  ELSE_IF (sentence[i]="a" OR sentence[i]="A" OR sentence[i]="e" OR 
+        sentence[i]="E" OR sentence[i]='O' OR sentence[i]="o"  OR sentence[i]="I" OR         sentence[i]="i" OR sentence[i]="U" OR sentence[i]="u")  THEN
+        vowels_number:= vowels_number+1;
+	
+  END_IF  
+  i := i +1;
+ END_WHILE
+
+    Write('Words number is ', words_number);
+     Write('Vowels number is', vowels_number);
+
+     
+ END
